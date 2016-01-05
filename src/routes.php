@@ -14,7 +14,6 @@ $app->get('/api/animes', function($request, $response) {
     $animes = $this->AnimesTable->find()->order([
         'name' => 'ASC'
     ])->all();
-    throw new Exception("Error Processing Request", 404);
 
     $body->write(json_encode($animes));
     return $response;

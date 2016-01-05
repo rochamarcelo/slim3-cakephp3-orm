@@ -4,7 +4,7 @@ use Cake\Datasource\ConnectionManager;
 // DIC configuration
 $container = $app->getContainer();
 
-$container['errorHandler'] = function ($c) {
+$container['errodrHandler'] = function ($c) {
     return function ($request, $response, $exception) use ($c) {
         $code = 500;
         $errorCode = $exception->getCode();
